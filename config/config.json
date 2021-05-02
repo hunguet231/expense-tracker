@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "user": "root",
+    "password": "huet231",
+    "database": "expense_tracker_app"
+}
