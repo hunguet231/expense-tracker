@@ -1,0 +1,87 @@
+.login {
+    width: 90%;
+    max-width: 980px;
+    height: auto;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fff;
+}
+
+.login .login-left {
+    background-image: linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%);
+}
+
+.slogan {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.login img.login-img {
+    width: 80%;
+    animation: moving 4s infinite;
+}
+
+.login img {
+    width: 32px;
+    margin-left: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .submit-btn {
+    margin-top: 20px;
+    border-radius: 999px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    background-image: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+    background-size: 200%;
+    transition: background-position .5s;
+}
+
+form .submit-btn:hover {
+    background-position: center;
+}
+
+.login .MuiTextField-root,
+.login .MuiFormControl-root {
+    margin-top: 20px;
+}
+
+.login .register .MuiFormLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(14px, -6px) scale(0.75);
+    -moz-transform: translate(14px, -6px) scale(0.75);
+    -webkit-transform: translate(14px, -6px) scale(0.75);
+    -o-transform: translate(14px, -6px) scale(0.75);
+}
+
+.login .MuiInputLabel-root {
+    font-size: 14px;
+}
+
+@media (max-width: 510px) {
+    .slogan {
+        font-size: 16px !important;
+    }
+    .login form input {
+        margin-top: 14px;
+    }
+    .login p.text-sm {
+        font-size: 14px;
+    }
+    .gg-login-inner span,
+    .my-facebook-button-class {
+        font-size: 12px;
+    }
+}

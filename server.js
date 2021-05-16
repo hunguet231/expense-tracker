@@ -11,6 +11,7 @@ const transactionRoutes = require("./routes/transactions");
 const authRoutes = require("./routes/auth");
 
 const errorController = require("./controllers/error");
+const { notFound, errorHandler } = require("./middlewares/error");
 
 const app = express();
 
@@ -28,9 +29,9 @@ app.use("/api/v1/transactions", transactionRoutes);
 app.use("/api/v1/auth", authRoutes);
 
 // error handler
-app.use(errorController.get404);
+app.use(notFound);
 
-app.use(errorController.get500);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 

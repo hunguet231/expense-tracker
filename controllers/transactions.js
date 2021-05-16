@@ -45,12 +45,12 @@ exports.createTransaction = async (req, res, next) => {
   }
 };
 
-// @desc    Update single transaction by ID
+// @desc    Update single transaction
 // @route   PUT /api/v1/transactions/:id
 // @access  Private
 exports.updateTransaction = async (req, res, next) => {
   try {
-    const [transaction] = await Transaction.updateById(req.params.id, req.body);
+    const [transaction] = await Transaction.update(req.params.id, req.body);
     res.status(200).json(transaction);
   } catch (error) {
     if (!error.statusCode) {

@@ -20,4 +20,12 @@ module.exports = class User {
       data
     );
   }
+
+  static update(data) {
+    return db.execute(
+      `UPDATE users 
+      SET firstName = ?, lastName = ?, birthday = ?, sex = ?, address = ?, balance = ?, username = ?, password = ?`,
+      data
+    );
+  }
 };

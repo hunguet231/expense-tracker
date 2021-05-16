@@ -17,13 +17,13 @@ module.exports = class Transaction {
     );
   }
 
-  static async updateById(id, reqBody) {
+  static async update(id, reqBody) {
     const [transaction] = await this.getSingle(id);
 
-    const amount = reqBody.amount || transaction.amount;
-    const type = reqBody.type || transaction.type;
-    const title = reqBody.title || transaction.title;
-    const description = reqBody.description || transaction.description;
+    const amount = reqBody.amount || transaction[0].amount;
+    const type = reqBody.type || transaction[0].type;
+    const title = reqBody.title || transaction[0].title;
+    const description = reqBody.description || transaction[0].description;
 
     return db.execute(
       `UPDATE transactions 

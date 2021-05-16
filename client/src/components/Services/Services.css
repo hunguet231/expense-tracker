@@ -1,0 +1,14 @@
+.services {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.services h3 {
+    font-size: 16px;
+}
+
+.services .sub-title {
+    font-size: 14px;
+    color: #2f2f2f;
+}
