@@ -1,0 +1,38 @@
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.expense {
+    color: #ff5e57;
+    font-weight: 500;
+}
+
+.income {
+    color: #0be881;
+    font-weight: 500;
+}
+
+.transaction .title {
+    font-weight: 500;
+}
+
+.transaction .description,
+.transaction .date {
+    color: #4d4d4d;
+    font-size: 14px;
+}
+
+.transaction .date {
+    display: flex;
+    align-items: center;
+}
+
+.transaction .date .MuiSvgIcon-root {
+    font-size: 17px;
+    margin-right: 3px;
+}

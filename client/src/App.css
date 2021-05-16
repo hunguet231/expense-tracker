@@ -36,7 +36,7 @@ a {
 .app {
     position: relative;
     min-height: 100vh;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     background-color: #f1f2f7;
 }
 

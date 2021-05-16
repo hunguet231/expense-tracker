@@ -1,0 +1,39 @@
+.transaction-list {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.transaction-list .top,
+.transaction-list .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transaction-list .heading .MuiSvgIcon-root {
+    margin-right: 5px;
+}
+
+.transaction-list h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.transaction-list .add-tran-button {
+    color: #fff;
+    background-color: #4bcffa;
+    padding: 5px 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.transaction-list .add-tran-button:hover {
+    background-color: #6fdbff;
+}
+
+.transaction-list .add-tran-button:active {
+    box-shadow: none;
+}

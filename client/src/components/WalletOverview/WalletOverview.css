@@ -1,0 +1,33 @@
+.wallet-wrapper {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wallet-inner {
+    display: flex;
+    align-items: center;
+}
+
+.wallet-inner h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.wallet-info p {
+    font-size: 14px;
+    color: #74b9ff;
+}
+
+.wallet-inner img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.wallet-setting .MuiSvgIcon-root {
+    color: gray;
+}

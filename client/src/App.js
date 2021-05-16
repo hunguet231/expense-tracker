@@ -10,6 +10,8 @@ import Footer from "./components/Footer/Footer";
 import Menu from "./components/Menu/Menu";
 import Services from "./components/Services/Services";
 import TopBanner from "./components/TopBanner/TopBanner";
+import TransactionList from "./components/TransactionList/TransactionList";
+import WalletOverview from "./components/WalletOverview/WalletOverview";
 import Login from "./pages/Login/Login";
 
 function App() {
@@ -27,6 +29,16 @@ function App() {
               <>
                 <TopBanner />
                 <Services />
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/dashboard"
+            render={(props) => (
+              <>
+                <WalletOverview />
+                <TransactionList />
               </>
             )}
           />

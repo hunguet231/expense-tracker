@@ -9,3 +9,7 @@
 .top-banner p.sub-heading {
     margin-top: 10px;
 }
+
+.top-banner .sub-heading {
+    color: #2f2f2f;
+}
