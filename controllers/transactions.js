@@ -35,7 +35,9 @@ exports.getTransaction = async (req, res, next) => {
 // @access  Private
 exports.createTransaction = async (req, res, next) => {
   try {
-    const [transaction] = await Transaction.create(req.body, req.user.id);
+    req.body.TRANUID = req.user.UID;
+
+    const [transaction] = await Transaction.create(req.body);
     res.status(200).json(transaction);
   } catch (error) {
     if (!error.statusCode) {

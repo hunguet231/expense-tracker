@@ -6,6 +6,7 @@ import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import AppsOutlinedIcon from "@material-ui/icons/AppsOutlined";
 import NotificationsOutlinedIcon from "@material-ui/icons/NotificationsOutlined";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
+import CreditCardOutlinedIcon from "@material-ui/icons/CreditCardOutlined";
 import "./Menu.css";
 import { Link } from "react-router-dom";
 
@@ -41,19 +42,25 @@ function Menu() {
               <IconButton size="small">
                 <InfoOutlinedIcon />
               </IconButton>
-              <a href="#">Giới thiệu</a>
+              <Link to="/about">Giới thiệu</Link>
+            </li>
+            <li>
+              <IconButton size="small">
+                <CreditCardOutlinedIcon />
+              </IconButton>
+              <Link to="/dashboard">Chi tiêu</Link>
             </li>
             <li>
               <IconButton size="small">
                 <AppsOutlinedIcon />
               </IconButton>
-              <a href="#">Tiện ích</a>
+              <Link to="/ultils">Tiện ích</Link>
             </li>
             <li>
               <IconButton size="small">
                 <NotificationsOutlinedIcon />
               </IconButton>
-              <a href="#">Thông báo</a>
+              <Link to="/notification">Thông báo</Link>
             </li>
           </ul>
           <div className="user-info" onClick={handleClickUser}>

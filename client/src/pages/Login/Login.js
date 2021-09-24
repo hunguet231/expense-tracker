@@ -29,7 +29,9 @@ function Login({ location, history }) {
 
   const { loading, error } = userLogin;
 
-  const redirect = location.search ? location.search.split("=")[1] : "/";
+  const redirect = location.search
+    ? location.search.split("=")[1]
+    : "/dashboard";
 
   // check if user logged in
   useEffect(() => {
@@ -69,8 +71,10 @@ function Login({ location, history }) {
     <div className="login">
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} className="login-left">
-          <p className="slogan text-center">Ứng dụng quản lý chi tiêu</p>
-          <img className="login-img" src="/login.svg" />{" "}
+          <p className="slogan text-center">
+            ETracker - Quản lý chi tiêu cá nhân
+          </p>
+          <img className="login-img" src="/login.svg" alt="login" />{" "}
         </Grid>
         <Grid item xs={12} sm={6}>
           <h3 className="text-center">Đăng nhập</h3>

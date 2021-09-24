@@ -5,15 +5,23 @@ module.exports = class Transaction {
     return db.execute("SELECT * FROM transactions");
   }
 
-  static getSingle(id) {
-    return db.execute(`SELECT * FROM transactions WHERE TID = ${id}`);
+  static getSingle(tid) {
+    return db.execute(`SELECT * FROM transactions WHERE TID = '${tid}'`);
   }
 
-  static create(reqBody, userId) {
-    const { amount, type, title, description } = reqBody;
+  static getAllByUserId(uid) {
+    return db.execute(
+      `SELECT TID, amount, type, title, description, createdDate, modifiedDate, TRANUID
+      FROM transactions INNER JOIN users ON transactions.TRANUID = ${uid} `
+    );
+  }
+
+  static create(reqBody) {
+    const { amount, type, title, description, TRANUID } = reqBody;
     return db.execute(
       `INSERT INTO transactions (amount, type, title, description, TRANUID) 
-       VALUES (${amount}, ${type}, ${title}, ${description}, ${userId})`
+       VALUES (?, ?, ?, ?, ?)`,
+      [amount, type, title, description, TRANUID]
     );
   }
 
@@ -27,12 +35,13 @@ module.exports = class Transaction {
 
     return db.execute(
       `UPDATE transactions 
-       SET amount = ${amount}, type = ${type}, title = ${title}, description = ${description}  
-       WHERE TID = ${id}`
+       SET amount = ?, type = ?, title = ?, description = ? 
+       WHERE TID = '${id}'`,
+      [amount, type, title, description]
     );
   }
 
   static deleteById(id) {
-    return db.execute(`DELETE FROM transactions WHERE TID = ${id}`);
+    return db.execute(`DELETE FROM transactions WHERE TID = '${id}'`);
   }
 };

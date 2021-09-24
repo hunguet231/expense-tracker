@@ -20,9 +20,12 @@
     font-size: 18px;
 }
 
-.transaction-list .add-tran-button {
+.add-tran-button {
+    display: flex;
+    align-items: center;
     color: #fff;
     background-color: #4bcffa;
+    width: fit-content;
     padding: 5px 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 5px;
@@ -30,10 +33,35 @@
     transition: all 0.2s ease-in-out;
 }
 
-.transaction-list .add-tran-button:hover {
+.add-tran-button:hover {
     background-color: #6fdbff;
 }
 
-.transaction-list .add-tran-button:active {
+.add-tran-button:active {
     box-shadow: none;
+}
+
+.transaction-list .empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.transaction-list .empty img {
+    width: 300px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+}
+
+.filter-list {
+    margin-left: 10px;
+}
+
+.filter .MuiSelect-root {
+    padding: 3px;
+    background-color: #fff;
 }

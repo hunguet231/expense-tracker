@@ -8,6 +8,8 @@ require("dotenv").config();
 
 const transactionRoutes = require("./routes/transactions");
 
+const userRoutes = require("./routes/users");
+
 const authRoutes = require("./routes/auth");
 
 const errorController = require("./controllers/error");
@@ -26,6 +28,7 @@ app.use(cookieParser());
 
 // mount routes
 app.use("/api/v1/transactions", transactionRoutes);
+app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/auth", authRoutes);
 
 // error handler

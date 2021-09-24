@@ -2,9 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 15px;
-    padding-bottom: 8px;
+    padding: 8px 5px 8px;
     border-bottom: 1px solid #dfdfdf;
+    position: relative;
+}
+
+.transaction .amount {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .expense {
@@ -35,4 +41,16 @@
 .transaction .date .MuiSvgIcon-root {
     font-size: 17px;
     margin-right: 3px;
+}
+
+.transaction .action {
+    visibility: hidden;
+}
+
+.transaction:hover .action {
+    visibility: visible;
+}
+
+.transaction:hover {
+    background-color: #f5f5f5;
 }

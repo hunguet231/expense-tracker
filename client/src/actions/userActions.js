@@ -52,7 +52,7 @@ export const logout = () => (dispatch) => {
 };
 
 export const register =
-  (firstName, lastName, shopName, username, password, avatarUser) =>
+  (firstName, lastName, birthday, sex, address, balance, username, password) =>
   async (dispatch) => {
     try {
       dispatch({
@@ -70,10 +70,12 @@ export const register =
         {
           firstName,
           lastName,
-          shopName,
+          birthday,
+          sex,
+          address,
+          balance,
           username,
           password,
-          avatarUser,
         },
         config
       );

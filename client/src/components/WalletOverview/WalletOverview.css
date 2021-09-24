@@ -3,13 +3,14 @@
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
-.wallet-inner {
+.wallet-inner,
+.wallet-info .heading {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .wallet-inner h3 {
@@ -30,4 +31,18 @@
 
 .wallet-setting .MuiSvgIcon-root {
     color: gray;
+}
+
+.total-each p {
+    color: #2f2f2f;
+}
+
+.go-chart {
+    color: #a29bfe;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.wallet-info .balance {
+    font-size: 18px;
 }

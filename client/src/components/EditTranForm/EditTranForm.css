@@ -1,0 +1,52 @@
+.amount-text {
+    margin-bottom: 10px;
+}
+
+.amount-text span {
+    color: orange;
+}
+
+.edit-wrapper {
+    margin-top: 20px;
+    padding: 10px 15px;
+}
+
+.edit-wrapper .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.breadcrumbs {
+    width: 100%;
+    max-width: 1000px;
+    padding: 5px 8px;
+    position: absolute;
+    left: 50%;
+    font-size: 14px !important;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.text-breadcrumbs {
+    font-size: 14px !important;
+}
+
+.breadcrumbs .MuiSvgIcon-root {
+    margin-bottom: 3px;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-tran-button {
+    color: dodgerblue;
+    font-weight: 500;
+    position: absolute;
+    right: 15px;
+}

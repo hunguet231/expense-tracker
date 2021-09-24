@@ -7,19 +7,8 @@ const User = require("../models/User");
 // @route   POST /api/v1/auth/register
 // @access  Public
 exports.register = asyncHandler(async (req, res, next) => {
-  let {
-    firstName,
-    lastName,
-    birthday,
-    sex,
-    address,
-    balance,
-    username,
-    password,
-  } = req.body;
-
   // check if username already exists
-  const [userExists] = await User.getSingleByUsername(username);
+  const [userExists] = await User.getSingleByUsername(req.body.username);
   if (userExists.length) {
     res.status(400);
     throw new Error("Tài khoản này đã tồn tại");
@@ -28,22 +17,14 @@ exports.register = asyncHandler(async (req, res, next) => {
 
   // hash password before store to DB
   const salt = await bcrypt.genSalt(10);
-  password = await bcrypt.hash(password, salt);
+  req.body.password = await bcrypt.hash(req.body.password, salt);
 
   // create new user
-  const [user] = await User.create([
-    firstName,
-    lastName,
-    birthday,
-    sex,
-    address,
-    balance,
-    username,
-    password,
-  ]);
+  await User.create(req.body);
+  const [newUser] = await User.getLastInsertedRow();
 
   // send token back
-  sendTokenResponse(user, 201, res);
+  sendTokenResponse(newUser, 200, res);
 });
 
 // @desc    Login user

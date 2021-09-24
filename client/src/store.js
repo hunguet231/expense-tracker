@@ -4,9 +4,22 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import { userLoginReducer, userRegisterReducer } from "./reducers/userReducers";
 
+import {
+  transactionListReducer,
+  transactionDetailsReducer,
+  transactionCreateReducer,
+  transactionUpdateReducer,
+  transactionDeleteReducer,
+} from "./reducers/transactionReducers";
+
 const rootReducer = combineReducers({
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
+  transactionList: transactionListReducer,
+  transactionDetails: transactionDetailsReducer,
+  transactionCreate: transactionCreateReducer,
+  transactionUpdate: transactionUpdateReducer,
+  transactionDelete: transactionDeleteReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")
